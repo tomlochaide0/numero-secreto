@@ -1,0 +1,153 @@
+/* Estilo global aplicado a todos os elementos */
+* {
+    box-sizing: border-box; /* Define que o padding e a borda serão incluídos nas dimensões do elemento */
+    margin: 0; /* Remove todas as margens dos elementos */
+    padding: 0; /* Remove todos os paddings dos elementos */
+    color: white; /* Define a cor do texto como branco */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%); /* Gradiente de fundo com várias cores */
+    height: 100vh; /* A altura do corpo será igual à altura da janela de visualização */
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: center; /* Alinha os itens horizontalmente no centro */
+}
+
+/* Estilo para o pseudo-elemento ::before do body */
+body::before {
+    background-image: url("img/code.png"); /* Imagem de fundo com caminho relativo */
+    background-repeat: no-repeat; /* A imagem não se repetirá */
+    background-position: right; /* A imagem de fundo será posicionada à direita */
+    content: ""; /* Cria conteúdo vazio (necessário para o pseudo-elemento) */
+    display: block; /* Exibe como bloco */
+    position: absolute; /* Posiciona de forma absoluta em relação ao body */
+    width: 100%; /* Largura de 100% */
+    height: 100%; /* Altura de 100% */
+    opacity: 0.4; /* Define a opacidade da imagem para 40% */
+}
+
+/* Estilo para a classe .container, um contêiner centralizado */
+.container {
+    width: 80%; /* Largura de 80% da área visível */
+    height: 80%; /* Altura de 80% da área visível */
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Espaça os itens igualmente entre si */
+    border-radius: 24px; /* Bordas arredondadas com raio de 24px */
+    border: 1px solid #1875E8; /* Borda com cor azul */
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15); /* Sombra suave ao redor do contêiner */
+    background-image: url("img/Ruido.png"); /* Imagem de fundo */
+    background-size: 100% 100%; /* Ajusta a imagem para cobrir toda a área do contêiner */
+    position: relative; /* Posiciona o contêiner de forma relativa */
+}
+
+/* Estilo para a parte inferior do contêiner */
+.container__conteudo {
+    display: flex; /* Layout flexível */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner */
+    bottom: 0; /* Posiciona no fundo do contêiner */
+}
+
+/* Estilo para a área de informações dentro do contêiner */
+.container__informacoes {
+    flex: 1; /* Flexibilidade de 1, ocupando todo o espaço disponível */
+    padding: 3rem; /* Padding de 3rem ao redor do conteúdo */
+}
+
+/* Estilo para o botão dentro do contêiner */
+.container__botao {
+    border-radius: 16px; /* Bordas arredondadas com raio de 16px */
+    background: #1875E8; /* Cor de fundo azul */
+    padding: 16px 24px; /* Padding interno do botão */
+    width: 100%; /* Largura total do botão */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    border: none; /* Remove a borda do botão */
+    margin-top: 2rem; /* Espaço acima do botão */
+}
+
+/* Estilo para o texto dentro do contêiner */
+.container__texto {
+    margin: 16px 0 16px 0; /* Espaço vertical de 16px ao redor do texto */
+}
+
+/* Estilo para o texto azul dentro do contêiner */
+.container__texto-azul {
+    color: #1875E8; /* Cor azul para o texto */
+}
+
+/* Estilo para o campo de entrada (input) */
+.container__input {
+    width: 100%; /* Largura total do input */
+    height: 72px; /* Altura do input */
+    border-radius: 16px; /* Bordas arredondadas */
+    background-color: #FFF; /* Cor de fundo branca */
+    border: none; /* Remove a borda do input */
+    color: #1875E8; /* Cor do texto azul */
+    padding: 2rem; /* Padding interno */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte (negrito) */
+    font-family: 'Inter', sans-serif; /* Família tipográfica do input */
+}
+
+/* Estilo para o grupo de botões dentro do contêiner */
+.container__botoes {
+    display: flex; /* Layout flexível */
+    gap: 2em; /* Espaçamento entre os botões */
+}
+
+/* Estilo para o título principal */
+h1 {
+    font-family: 'Chakra Petch', sans-serif; /* Família tipográfica do título */
+    font-size: 72px; /* Tamanho da fonte */
+    padding-bottom: 3rem; /* Padding inferior */
+}
+
+/* Estilo para o parágrafo e o botão */
+p,
+button {
+    font-family: 'Inter', sans-serif; /* Família tipográfica do parágrafo e botão */
+}
+
+/* Estilo para o parágrafo dentro do contêiner */
+.texto__paragrafo {
+    font-size: 32px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte normal */
+}
+
+/* Estilo para botões desabilitados */
+button:disabled {
+    background-color: gray; /* Cor de fundo cinza para botões desabilitados */
+}
+
+/* Media query para telas menores que 1250px */
+@media screen and (max-width: 1250px) {
+
+    h1 {
+        font-size: 50px; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .container__botao {
+        font-size: 16px; /* Reduz o tamanho da fonte do botão em telas menores */
+    }
+
+    .texto__paragrafo {
+        font-size: 24px; /* Reduz o tamanho da fonte do parágrafo */
+    }
+
+    .container__imagem-pessoa {
+        display: none; /* Oculta a imagem da pessoa em telas menores */
+    }
+
+    .container__conteudo {
+        display: block; /* Muda o layout flexível para bloco em telas menores */
+        position: inherit; /* Mantém o posicionamento original */
+    }
+
+    .container__informacoes {
+        padding: 1rem; /* Reduz o padding das informações */
+    }
+}
